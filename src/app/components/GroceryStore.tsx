@@ -17,11 +17,11 @@ interface CartItem extends Product {
 }
 
 const initialProducts: Product[] = [
-  { id: 1, name: 'Banana', price: 120, category: 'Fruit', stock: 10, imageUrl: '/placeholder.svg?height=100&width=100' },
-  { id: 2, name: 'Oil', price: 2450, category: 'Grocery', stock: 5, imageUrl: '/placeholder.svg?height=100&width=100' },
-  { id: 3, name: 'Milk', price: 2280, category: 'Grocery', stock: 8, imageUrl: '/placeholder.svg?height=100&width=100' },
-  { id: 4, name: 'Chicken', price: 799, category: 'Meat', stock: 6, imageUrl: '/placeholder.svg?height=100&width=100' },
-  { id: 5, name: 'Beef', price: 799, category: 'Meat', stock: 6, imageUrl: '/placeholder.svg?height=100&width=100' },
+  { id: 1, name: 'Banana', price: 120, category: 'Fruit', stock: 10, imageUrl: '/images/banana.jpg' },
+  { id: 2, name: 'Oil', price: 2450, category: 'Grocery', stock: 5, imageUrl: '/oil.jpg' },
+  { id: 3, name: 'Milk', price: 2280, category: 'Grocery', stock: 8, imageUrl: '/milk.jpg' },
+  { id: 4, name: 'Chicken', price: 799, category: 'Meat', stock: 6, imageUrl: '/chicken.jpg' },
+  { id: 5, name: 'Beef', price: 799, category: 'Meat', stock: 6, imageUrl: '/beef.jpg' },
 ]
 
 export default function GroceryStore() {
@@ -164,7 +164,7 @@ export default function GroceryStore() {
     <div className="min-h-screen bg-gray-100">
       <header className="bg-green-600 text-white p-4">
         <div className="container mx-auto flex justify-between items-center">
-          <img src="/placeholder.svg?height=52&width=48" alt="Logo" className="h-13 w-12" />
+          <img src="images/mart.jpeg" alt="Logo" className="h-13 w-12" />
           <h1 className="text-2xl font-bold">Grocery & Meat Store</h1>
           <a href="https://wa.me/1234567890" className="flex items-center">
             <Phone className="mr-2" />
@@ -324,6 +324,7 @@ export default function GroceryStore() {
             Checkout and Download Bill
           </button>
         </div>
+        
       </main>
 
       <div className="container mx-auto mt-8 px-4">
@@ -351,7 +352,7 @@ function AddProductForm({ onAdd }: { onAdd: (product: Product) => void }) {
       price:  Math.round(parseFloat(price) * 100), // Convert to cents
       category,
       stock: parseInt(stock),
-      imageUrl: '/placeholder.svg?height=100&width=100',
+      imageUrl: '/placeholder.jpg',
     })
     setName('')
     setPrice('')
